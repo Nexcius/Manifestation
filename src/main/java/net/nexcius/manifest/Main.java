@@ -1,20 +1,16 @@
 package net.nexcius.manifest;
 
 import com.google.gson.Gson;
-import net.nexcius.manifest.models.ContentModel;
+import net.nexcius.manifest.models.FileModel;
 
 import java.util.ArrayList;
 
 public class Main {
 
     public static void main(String[] args) {
-	// write your code here
-        ArrayList<ContentModel> a = new ArrayList<ContentModel>();
-        a.add(new ContentModel("AAA", "BBB", 123, "XXXX"));
-        a.add(new ContentModel("AAA", "BBB", 123, "XXXX"));
 
-        Gson g = new Gson();
+        FileModel fm = new FileModel("filename.txt", 332, "aaaabbbbCCCCDDDeeeFFF");
 
-        System.out.println(g.toJson(a));
+        System.out.println(fm.getJSON());
     }
 }

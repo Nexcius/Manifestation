@@ -13,17 +13,17 @@ public class VersionModel {
     private int size;
     private ArrayList<String> install;
     private ArrayList<String> remove;
-    private ArrayList<ContentModel> content;
+    private ArrayList<FileModel> content;
 
     public VersionModel(Version version, int size) {
         this.version = version;
         this.size = size;
         this.install = new ArrayList<String>();
         this.remove = new ArrayList<String>();
-        this.content = new ArrayList<ContentModel>();
+        this.content = new ArrayList<FileModel>();
     }
 
-    public VersionModel(Version version, int size, ArrayList<String> install, ArrayList<String> remove, ArrayList<ContentModel> content) {
+    public VersionModel(Version version, int size, ArrayList<String> install, ArrayList<String> remove, ArrayList<FileModel> content) {
         this.version = version;
         this.size = size;
         this.install = install;
@@ -55,7 +55,7 @@ public class VersionModel {
         return remove;
     }
 
-    public ArrayList<ContentModel> getContent() {
+    public ArrayList<FileModel> getContent() {
         return content;
     }
 
@@ -67,8 +67,8 @@ public class VersionModel {
         remove.add(path);
     }
 
-    public void addContent(ContentModel contentModel) {
-        content.add(contentModel);
+    public void addContent(FileModel fileModel) {
+        content.add(fileModel);
     }
 
     public String getJSON() {
